@@ -57,7 +57,7 @@ export async function CreateCommunity(prevState : any ,formData : FormData) {
                 userId: user.id,
             }
         })
-        return redirect("/community")
+        return redirect(`/r/${data.name}`)
     } catch (e) {
         if(e instanceof Prisma.PrismaClientKnownRequestError) {
             if (e.code === 'P2002') {

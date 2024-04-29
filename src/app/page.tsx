@@ -4,19 +4,41 @@ import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/co
 import {Card, CardHeader} from "@/components/ui/card";
 import {ArrowRightIcon} from "lucide-react";
 
-export default function Home() {
+
+export default function HomePage() {
   return (
       <>
+
+
+
+
+
         <div
-            className="h-[30rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
+            className="h-[60rem] w-full bg-black bg-grid-white/[0.2] relative flex items-center justify-center">
           {/* Radial gradient for the container to give a faded look */}
           <div
-              className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-          <p className="text-4xl sm:text-7xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8">
-            Backgrounds
-          </p>
+              className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+
+            <div className={"container max-w-6xl"}>
+                <div className={"font-extrabold grid text-6xl items-center justify-items-center text-balance"}>
+                    <p>L{"'"}association</p>
+                    <p className={"text-primary text-5xl"}>Gaston Berger Initiatives Tertiraires</p>
+                </div>
+
+                {/*<Image src={"/images/gbit-logo.png"} alt={"GBIT Logo"} height={250} width={250} className={"rounded-2xl"}/>*/}
+            </div>
+
+
+
         </div>
           <ContentSection />
+
+          <div>
+
+          </div>
+
+
+
       </>
   );
 }

@@ -2,7 +2,7 @@ import {Separator} from "@/components/ui/separator";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
 import {SubDescriptionForm} from "@/components/forms/subdescription-form";
-import {buttonVariants} from "@/components/ui/button";
+import {Button, buttonVariants} from "@/components/ui/button";
 import {CreatePostCard} from "@/components/create-post-card";
 import {PostCard} from "@/components/post-card";
 import { cn } from "@/lib/utils";
@@ -10,7 +10,7 @@ import Image from "next/image";
 import prisma from "@/lib/db";
 import Link from "next/link";
 import Pagination from "@/components/pagination";
-import {ChevronLeft} from "lucide-react";
+import {ChevronLeft, MessageSquareOff, TriangleAlert} from "lucide-react";
 
 async function getData(name: string, searchParam: string) {
     const [count, data] = await prisma.$transaction([
@@ -63,7 +63,7 @@ export default async function SubRedditRoute({params, searchParams} : {params: {
 
     return (
         <>
-            <div className="flex min-h-screen w-full flex-col bg-muted/40">
+            <div className="flex min-h-screen w-full flex-col">
                 <div className={"container max-w-7xl"}>
                     <div className={"mt-10 mb-5"}>
                         <Link href={"/community"}
@@ -73,20 +73,45 @@ export default async function SubRedditRoute({params, searchParams} : {params: {
                     </div>
                     <div className={"flex max-sm:flex-col gap-x-6 max-sm:gap-y-6 mt-4 mb-40"}>
                         <div className={"md:w-[70%] flex flex-col gap-y-6"}>
-                            <CreatePostCard/>
-                            {data?.posts.map((post) => (
-                                <PostCard
-                                    key={post.id} title={post.title} jsonContent={post.textContent}
-                                    id={post.id} subName={data.name} userName={post.User?.userName as string}
-                                    createdAt={post.createAt} comments={post.Comment.length}
-                                    voteCount={post.Vote.reduce((acc, vote) => {
-                                        if (vote.voteType === "UP") return acc + 1;
-                                        if (vote.voteType === "DOWN") return acc - 1;
-                                        return acc
-                                    }, 0)}
-                                />
-                            ))}
-                            <Pagination totalPages={Math.ceil(count / 6)}/>
+                            <CreatePostCard community={data?.name as string} />
+
+                            {data?.posts.length === 0 ? (
+                                <>
+                                    <div
+                                        className="flex h-[600px] shrink-0 items-center justify-center rounded-xl border border-dashed">
+                                        <div
+                                            className="mx-2 flex max-w-[420px] flex-col items-center justify-center text-center">
+                                            <MessageSquareOff className={"h-10 w-10 text-muted-foreground"}/>
+                                            <h3 className="mt-4 text-2xl font-bold text-muted-foreground">
+                                                Aucun post n{"'"}a été ajouté
+                                            </h3>
+                                            <p className="mb-4 mt-2 text-sm text-muted-foreground">
+                                                Vous n{"'"}avez ajouté aucun message. Ajoutez-en un ci-dessous.
+                                            </p>
+                                            <Link href={`/r/${data?.name}/create`} className={cn(buttonVariants({size: "sm"}))}>
+                                                Ajouter un post
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    {data?.posts.map((post) => (
+                                        <PostCard
+                                            key={post.id} title={post.title} jsonContent={post.textContent}
+                                            id={post.id} subName={data.name} userName={post.User?.userName as string}
+                                            createdAt={post.createAt} comments={post.Comment.length}
+                                            voteCount={post.Vote.reduce((acc, vote) => {
+                                                if (vote.voteType === "UP") return acc + 1;
+                                                if (vote.voteType === "DOWN") return acc - 1;
+                                                return acc
+                                            }, 0)}
+                                        />
+                                    ))}
+                                    <Pagination totalPages={Math.ceil(count / 6)}/>
+                                </>
+                            )}
+
                         </div>
                         <div className={"md:w-[30%]"}>
                             <Card>

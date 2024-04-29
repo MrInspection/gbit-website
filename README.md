@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# GBIT Website (School)
 
-First, run the development server:
+The `GBIT Website` is a study project with the aim of providing the Lycée Gaston Berger Student Association with a website. The website must be mobile responsive and must contain a landing page, a contact form that stores contact information into a database and also a privacy policy to be in line with the EU `General Data Protection Regulation`.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[GBIT Website]() is a project by [Moussa](), aka MrInspection or ProjectUltron 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔄️ Features 
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Prisma ORM `Database Management`
+- Supabase Database `PostgreSQL Database`
+- Authentication System
+  - Custom Login Page
+  - Passwordless Auth
+  - 0Auth : Google & Microsoft
+      
+- Community System
+  - Comment Section
+  - Subreddit Section
+  - Voting System : `UPVOTE, VOTE`
+  - Pagination System
+- Username Generator
+- Dynamic Routing
+- Caching & Pending States
+- Streaming with Suspense Boundaries
+- Server Side Implementation
+- Speed optimization
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🛠️ Development Stack 
 
-## Learn More
+- `NextJS`
+- `Typescript`
+- `TailwindCSS`
+- `Shadcn UI`
+- `React`
 
-To learn more about Next.js, take a look at the following resources:
+## How to run this project ?
+To run this project on your local environment, follow the following steps : 
+- Clone the repository to your local machine or download the source code.
+- Run the command `npm install` in the project directory to install the **required** dependencies
+- Run the command `npm run start` to start the `production build` of the project.
+- Open your internet browser and go to the following address: [http://localhost:3000](http://localhost:3000)
+  ㅤ
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| Project ID  | Name | Type                  | Leadership                                        | ProjectUltron Programs | Status      |
+|-------------|------|-----------------------|---------------------------------------------------|------------------------|-------------|
+| pulabs-gbit | GBIT | `Web Project, School` | [MrInspection]("https://github.com/MrInspection") | Labs, Argumentum       | `Completed` |

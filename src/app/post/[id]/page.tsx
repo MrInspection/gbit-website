@@ -78,9 +78,6 @@ export default async function PostPage({params}: { params: { id: string } }) {
                               className={cn(buttonVariants({variant: "outline", size: "default"}))}>
                             <ChevronLeft className={"h-4 w-4 mr-2"}/> Retour
                         </Link>
-                        <Button variant={"outline"}>
-                            <Share2 className={"h-4 w-4 mr-2"}/> Share Post
-                        </Button>
                     </div>
 
                     <div className={"flex max-sm:flex-col gap-x-6 max-sm:gap-y-6 mt-4 mb-40"}>

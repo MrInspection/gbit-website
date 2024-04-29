@@ -1,5 +1,5 @@
 export const siteConfig = {
-    name: "ProjectUltron Loop",
+    name: "GBIT & CVLE",
     description: "",
     links: {
         gaston_berger: "https://www.gastonberger.fr/",
