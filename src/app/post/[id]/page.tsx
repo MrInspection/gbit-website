@@ -13,9 +13,10 @@ import {CopyLink} from "@/components/copy-link";
 import {RenderToJson} from "@/components/render-to-json";
 import {CommentForm} from "@/components/forms/comment-form";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar"
-
+import {unstable_noStore as noStore} from "next/cache"
 
 async function getData(id: string) {
+    noStore()
     const data = await prisma.post.findUnique({
         where: {id: id},
         select: {

@@ -11,8 +11,10 @@ import prisma from "@/lib/db";
 import Link from "next/link";
 import Pagination from "@/components/pagination";
 import {ChevronLeft, MessageSquareOff, TriangleAlert} from "lucide-react";
+import {unstable_noStore as noStore} from "next/cache"
 
 async function getData(name: string, searchParam: string) {
+    noStore()
     const [count, data] = await prisma.$transaction([
         prisma.post.count({
             where: { subName: name }

@@ -8,8 +8,10 @@ import {PostCard} from "@/components/post-card";
 import {Suspense} from "react";
 import SuspenseCard from "@/components/suspense-card";
 import Pagination from "@/components/pagination";
+import {unstable_noStore as noStore} from "next/cache"
 
 async function getData(searchParam: string) {
+    noStore()
     const [count, data] = await prisma.$transaction([
         prisma.post.count(),
         prisma.post.findMany({
