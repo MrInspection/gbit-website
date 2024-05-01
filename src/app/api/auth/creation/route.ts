@@ -30,5 +30,5 @@ export async function GET(req: NextRequest) {
             },
         });
     }
-    return NextResponse.redirect("http://localhost:3000/community/")
+    return NextResponse.redirect(process.env.NODE_ENV === 'development'  ? "http://localhost:3000/community/" : "https://pulabs-gbit.vercel.app/")
 }
