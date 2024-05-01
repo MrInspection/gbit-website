@@ -63,18 +63,18 @@ export function MobileNav() {
                     <div className="flex flex-col space-y-3">
 
                         <Link href={"/"} className={"transition-colors hover:text-foreground/80 font-medium"}>
-                            Home
+                            Acceuil
                         </Link>
 
                         <Link
-                            href={"/feedbacks"}
+                            href={"/community"}
                             className={"transition-colors hover:text-foreground/80 font-medium"}
                         >
-                            Suggestions
+                            Espace Communautaire
                         </Link>
 
                         <Link
-                            href={"/contact"}
+                            href={"/#contact"}
                             className={"transition-colors hover:text-foreground/80 font-medium"}
                         >
                             Contact
