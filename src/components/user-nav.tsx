@@ -3,11 +3,11 @@ import {
     DropdownMenuContent, DropdownMenuGroup,
     DropdownMenuItem,
     DropdownMenuLabel,
-    DropdownMenuSeparator, DropdownMenuShortcut,
+    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {LogOut, MessageSquareMore, Scale, Settings, Users} from "lucide-react";
+import {LogOut, Scale, Settings, Users} from "lucide-react";
 import Link from "next/link";
 import {LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
 
@@ -26,22 +26,17 @@ export default function UserNav({userImage} : iAppProps) {
                     </Avatar>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className={"w-52"}>
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                    <DropdownMenuLabel>Mon Compte</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
                         <DropdownMenuItem>
                             <Link href={"/r/create"} className={"flex items-center w-full"}>
-                                <Users className={"h-4 w-4 mr-2"}/> Create Community
-                            </Link>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem>
-                            <Link href={"/create"} className={"flex items-center w-full"}>
-                                <MessageSquareMore className={"h-4 w-4 mr-2"} /> Create New Post
+                                <Users className={"h-4 w-4 mr-2"}/> Créer un groupe
                             </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
                             <Link href={"/settings"} className={"flex items-center w-full"}>
-                                <Settings className={"h-4 w-4 mr-2"} /> Settings
+                                <Settings className={"h-4 w-4 mr-2"} /> Mes Paramètres
                             </Link>
                         </DropdownMenuItem>
                     </DropdownMenuGroup>
@@ -61,7 +56,7 @@ export default function UserNav({userImage} : iAppProps) {
                     <DropdownMenuSeparator />
                     <DropdownMenuItem className={"text-red-500 font-medium focus:bg-red-500 focus:text-white"}>
                         <LogoutLink className={"flex items-center w-full"}>
-                            <LogOut className={"h-4 w-4 mr-2"} /> Logout
+                            <LogOut className={"h-4 w-4 mr-2"} /> Se déconnecter
                         </LogoutLink>
                     </DropdownMenuItem>
                 </DropdownMenuContent>

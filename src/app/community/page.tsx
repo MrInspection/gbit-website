@@ -1,17 +1,13 @@
 import {buttonVariants} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Frown, MessageSquareMore, MessageSquareOff, School, Users} from "lucide-react";
+import {Frown, School, Users} from "lucide-react";
 import Link from "next/link";
 import {cn} from "@/lib/utils";
-import {CreatePostCard} from "@/components/create-post-card";
 import prisma from "@/lib/db";
 import {PostCard} from "@/components/post-card";
 import {Suspense} from "react";
 import SuspenseCard from "@/components/suspense-card";
 import Pagination from "@/components/pagination";
-import {Separator} from "@/components/ui/separator";
-import Image from "next/image";
-import {ExclamationTriangleIcon} from "@radix-ui/react-icons";
 
 async function getData(searchParam: string) {
     const [count, data] = await prisma.$transaction([
@@ -63,18 +59,18 @@ export default function CommunityPage({searchParams}: {searchParams: {page: stri
                             <Card>
                                 <CardHeader className="flex flex-row items-start bg-muted/50 rounded-t-xl">
                                     <CardTitle className={"flex"}>
-                                        <School className={"h-4 w-4 mr-2"}/> Community Home
+                                        <School className={"h-4 w-4 mr-2"}/> Espace Communautaire
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <p className={"mt-5 text-sm"}>
-                                        Your Home Reddit frontpage. Come here to check in with your favorite
-                                        communities.
+                                        La page d{"'"}accueil de votre espace communautaire. Venez ici
+                                        pour consulter tous les contenus publiés par les différentes communautés.
                                     </p>
                                     <div className={"mt-5 grid gap-2"}>
                                         <Link href={"/r/create"}
                                               className={cn(buttonVariants({variant: "default", size: "sm"}))}>
-                                            <Users className={"h-4 w-4 mr-2"}/> Create Community
+                                            <Users className={"h-4 w-4 mr-2"}/> Créer une communauté
                                         </Link>
                                     </div>
                                 </CardContent>

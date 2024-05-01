@@ -23,15 +23,22 @@ export default async function SettingsPage() {
     const data = await getData(user.id)
     return (
         <>
-            <div className={"container max-w-[1000px] mx-auto flex flex-col mt-4"}>
-                <div className={"my-12"}>
-                    <div className={"mb-8"}>
-                        <h1 className={"font-extrabold text-3xl tracking-tight"}>Settings</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div className={"bg-muted/40"}>
+                <div className={"container max-w-3xl h-[53rem] items-center justify-items-center justify-center"}>
+                    <div className={"pt-4"}>
+                        <div className={"my-12"}>
+                            <div className={"mb-8"}>
+                                <h1 className={"font-extrabold text-3xl tracking-tight"}>Mes paramètres</h1>
+                                <p>Gérer les paramètres de votre compte GBIT.</p>
+                            </div>
+                            <SettingsForm username={data?.userName}/>
+                        </div>
                     </div>
-                    <SettingsForm username={data?.userName}/>
                 </div>
             </div>
+
+
         </>
     )
 }

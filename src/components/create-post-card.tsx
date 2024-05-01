@@ -17,7 +17,7 @@ export function CreatePostCard({community} : {community: string}) {
                     className={"h-8 w-8 rounded-3xl ring-2 ring-primary"}
                 />
                 <Link href={`/r/${community}/create`} className={"w-full"}>
-                    <Input placeholder={"Create a new post"} />
+                    <Input placeholder={"Créer un nouveau poste..."} />
                 </Link>
 
                 <Link href={`/r/${community}/create`} className={cn(buttonVariants({variant: "default"}))}>

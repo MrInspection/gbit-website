@@ -2,7 +2,7 @@
 
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
-import {Button, buttonVariants} from "@/components/ui/button";
+import {buttonVariants} from "@/components/ui/button";
 import Link from "next/link";
 import {cn} from "@/lib/utils";
 import {UpdateUsername} from "@/lib/actions";
@@ -10,7 +10,6 @@ import {SubmitButton} from "@/components/submit-button";
 import {useFormState} from "react-dom";
 import {useEffect} from "react";
 import {toast} from "@/components/ui/use-toast";
-import {TriangleAlert} from "lucide-react";
 
 const initialState = {
     message: "",
@@ -32,7 +31,7 @@ export function SettingsForm({username} : {username: string | null | undefined})
                 description: state.message
             })
         }
-    }, [state, toast])
+    }, [state])
 
     return (
         <>
@@ -48,10 +47,10 @@ export function SettingsForm({username} : {username: string | null | undefined})
 
                 {state?.status === 'error' && (<p className={"text-destructive mt-1 text-sm"}>{state.message}</p>)}
                 <div className={"flex gap-2 justify-end"}>
-                    <Link href={"/community"} className={cn(buttonVariants({variant: "destructive"}))}>
-                        Cancel
+                    <Link href={"/community"} className={cn(buttonVariants({variant: "outline"}))}>
+                        Annuler
                     </Link>
-                    <SubmitButton text={"Change Username"} />
+                    <SubmitButton text={"Changer le pseudo"} />
                 </div>
             </form>
         </>

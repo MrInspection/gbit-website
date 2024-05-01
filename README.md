@@ -3,7 +3,7 @@
 
 The `GBIT Website` is a study project with the aim of providing the Lycée Gaston Berger Student Association with a website. The website must be mobile responsive and must contain a landing page, a contact form that stores contact information into a database and also a privacy policy to be in line with the EU `General Data Protection Regulation`.
 
-[GBIT Website]() is a project by [Moussa](), aka MrInspection or ProjectUltron 
+[GBIT Website]() is a project by [Moussa](), aka MrInspection or ProjectUltron
 
 ## 🔄️ Features 
 

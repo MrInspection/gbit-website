@@ -10,7 +10,7 @@ export function CopyLink({id}: {id: string}) {
     async function CopyToClipboard() {
         await navigator.clipboard.writeText(`${location.origin}/post/${id}`)
         toast({
-            title: "The link has been copied to your clipboard.",
+            title: "Le lien a été copié dans votre presse-papiers.",
         })
     }
 
