@@ -61,11 +61,9 @@ export function MobileNav() {
 
                 <div className={"my-4 h-[calc(100vh-8rem)] pb-10 pl-2"}>
                     <div className="flex flex-col space-y-3">
-
                         <Link href={"/"} className={"transition-colors hover:text-foreground/80 font-medium"}>
                             Acceuil
                         </Link>
-
                         <Link
                             href={"/community"}
                             className={"transition-colors hover:text-foreground/80 font-medium"}
@@ -74,7 +72,7 @@ export function MobileNav() {
                         </Link>
 
                         <Link
-                            href={"/#contact"}
+                            href={"/contact"}
                             className={"transition-colors hover:text-foreground/80 font-medium"}
                         >
                             Contact

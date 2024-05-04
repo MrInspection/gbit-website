@@ -77,3 +77,12 @@ model Comment {
   Post   Post?   @relation(fields: [postId], references: [id])
   postId String?
 }
+
+model Contact {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  subject   String
+  content   String
+  createdAt DateTime @default(now())
+}

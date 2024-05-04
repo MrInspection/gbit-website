@@ -25,8 +25,8 @@ export function MainNav() {
                 <Link href="/community" className={cn("transition-colors hover:text-foreground/80",
                     pathname === "/community" ? "text-primary" : "text-foreground/60")}> Espace Communautaire
                 </Link>
-                <Link href="/#contact" className={cn("transition-colors hover:text-foreground/80",
-                    pathname === "/#contact" ? "text-primary" : "text-foreground/60")}> Contact
+                <Link href="/contact" className={cn("transition-colors hover:text-foreground/80",
+                    pathname === "/contact" ? "text-primary" : "text-foreground/60")}> Contact
                 </Link>
             </nav>
         </div>

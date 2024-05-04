@@ -5,9 +5,8 @@ import {ContainerScroll} from "@/components/tablet-card";
 export default function HomePage() {
   return (
       <>
-          <div
-              className="max-h-fit w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative items-center justify-center">
-              <div className={"container max-md:pt-[25.5rem] pt-14 max-md:pb-[26rem] pb-24"}>
+          <div className="max-h-fit w-full dark:bg-black bg-white dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative items-center justify-center">
+              <div className={"container max-md:pt-[25.5rem] pt-14 max-md:pb-[26rem] md:pb-[14rem] lg:pb-24"}>
                   <ContainerScroll titleComponent={
                       <>
                           <div className={"font-extrabold grid items-center text-balance mb-14"}>
@@ -80,5 +79,3 @@ export default function HomePage() {
       </>
   );
 }
-
-

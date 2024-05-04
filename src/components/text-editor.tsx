@@ -76,7 +76,7 @@ export const MenuBar = ({editor} : {editor : Editor | null}) => {
 export function TextEditor({setJson, json}: {setJson : any, json: JSONContent | null}) {
     const editor = useEditor({
         extensions: [StarterKit],
-        content: json ?? "<p>Ceci est le début d'un magnifique paragraphe.</p>",
+        content: json ?? "<p>La thermodynamique étudie les échanges d'énergie dans les systèmes physiques. Ses lois principales incluent la conservation de l'énergie et l'augmentation de l'entropie avec le temps. Elle est cruciale dans divers domaines, de la physique à l'ingénierie.</p>",
         editorProps: {
             attributes: {
                 class: 'prose'
@@ -91,7 +91,7 @@ export function TextEditor({setJson, json}: {setJson : any, json: JSONContent | 
         <>
             <div className={""}>
                 <MenuBar editor={editor} />
-                <EditorContent editor={editor} className={"mt-3 border-2 rounded-md bg-muted/60 p-4 min-h-[200px]"}/>
+                <EditorContent editor={editor} className={"mt-3 border-2 rounded-md p-4 min-h-[200px]"}/>
             </div>
         </>
     )

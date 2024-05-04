@@ -2,7 +2,7 @@
 
 import {Button} from "@/components/ui/button";
 import { useFormStatus} from "react-dom"
-import {ArrowBigDown, ArrowBigUp, Loader2, Send, ThumbsDown} from "lucide-react";
+import {ArrowBigDown, ArrowBigUp, Loader2, Send} from "lucide-react";
 
 export function SubmitButton({text} : {text : string}) {
     const {pending} = useFormStatus()
@@ -47,7 +47,7 @@ export function CreatePostButton() {
             ) : (
                 <Button className={"w-full"} type={"submit"}>
                     <Send className={"h-4 w-4 mr-2"} />
-                    Publish Post
+                    Publier
                 </Button>
             )}
         </>

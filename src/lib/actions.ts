@@ -174,15 +174,24 @@ export async function CreateComment(formData : FormData) {
     const comment = formData.get('comment') as string
     const postId = formData.get('postId') as string
 
-    const data = await prisma.comment.create({
+     await prisma.comment.create({
         data: {
             text: comment,
             userId: user.id,
             postId: postId,
         }
     })
-
     revalidatePath(`/post/${postId}`)
+}
 
-
+export async function registerContact(name: string, email: string, subject: string, content: string) {
+    await prisma.contact.create({
+        data: {
+            name: name,
+            email: email,
+            subject: subject,
+            content: content,
+        }
+    })
+    return redirect("/")
 }
