@@ -34,6 +34,20 @@ The `GBIT Website` is a study project with the aim of providing the Lycée Gasto
 - `Shadcn UI`
 - `React`
 
+## Environment Variables
+
+```dotenv
+KINDE_CLIENT_ID=
+KINDE_CLIENT_SECRET=
+KINDE_ISSUER_URL=
+KINDE_SITE_URL=
+KINDE_POST_LOGOUT_REDIRECT_URL=
+KINDE_POST_LOGIN_REDIRECT_URL=
+
+DATABASE_URL=
+DIRECT_URL=
+```
+
 ## How to run this project ?
 To run this project on your local environment, follow the following steps : 
 - Clone the repository to your local machine or download the source code.
@@ -43,6 +57,14 @@ To run this project on your local environment, follow the following steps :
   ㅤ
 ---
 
-| Project ID  | Name | Type                  | Leadership                                        | ProjectUltron Programs | Status      |
-|-------------|------|-----------------------|---------------------------------------------------|------------------------|-------------|
-| pulabs-gbit | GBIT | `Web Project, School` | [MrInspection]("https://github.com/MrInspection") | Labs, Argumentum       | `Completed` |
+## What can I improve ?
+- Use NextAuth instead of Kinde Auth for user authentication.
+- Use a Markdown text editor instead of invoking an external library.
+- The ability to use the voting system on comments.
+- The ability to upload images and further customize the user profile.
+
+
+
+| Project ID  | Name | Type                  | Leadership                                  | ProjectUltron Programs | Status          |
+|-------------|------|-----------------------|---------------------------------------------|------------------------|-----------------|
+| pulabs-gbit | GBIT | `Web Project, School` | [Moussa]("https://github.com/MrInspection") | Labs, Argumentum       | `In Production` |
