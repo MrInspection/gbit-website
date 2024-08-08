@@ -8,7 +8,7 @@ import SiteFooter from "@/components/site-footer";
 const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
-    title: "GBIT Website - Spectron",
+    title: "GBIT Website - Spectron Labs",
     description: "A school project aiming to create a website for the GBIT organization.",
 };
 

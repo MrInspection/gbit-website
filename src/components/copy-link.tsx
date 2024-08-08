@@ -18,9 +18,8 @@ export function CopyLink({id}: {id: string}) {
         <>
             <button className={"flex gap-1.5 items-center group"} onClick={CopyToClipboard}>
                 <Share2 className={"h-4 w-4 text-muted-foreground group-hover:text-primary"} />
-                <p className={"text-muted-foreground text-sm font-medium group-hover:text-primary"}>Partager</p>
+                <p className={"text-muted-foreground text-sm font-medium group-hover:text-primary"}>Share</p>
             </button>
         </>
     )
-
 }

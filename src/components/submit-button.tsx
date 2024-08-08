@@ -2,7 +2,7 @@
 
 import {Button} from "@/components/ui/button";
 import { useFormStatus} from "react-dom"
-import {ArrowBigDown, ArrowBigUp, Loader2, Send} from "lucide-react";
+import {ArrowBigDown, ArrowBigUp, Loader2, Send, ThumbsDown, ThumbsUp} from "lucide-react";
 
 export function SubmitButton({text} : {text : string}) {
     const {pending} = useFormStatus()
@@ -81,13 +81,13 @@ export function UpVote() {
             {pending ? (
                 <>
                     <button className={"py-1 px-0.5 group"} type={"submit"} disabled={true}>
-                        <Loader2 className={"h-5 w-5 text-primary animate-spin"}/>
+                        <Loader2 className={"size-4 text-emerald-500 animate-spin"}/>
                     </button>
                 </>
             ) : (
                 <>
                     <button className={"py-1 px-0.5 group"} type={"submit"}>
-                        <ArrowBigUp className={"h-5 w-5 text-primary"}/>
+                        <ThumbsUp className={"size-4 text-emerald-500"}/>
                     </button>
                 </>
                 )}
@@ -102,13 +102,13 @@ export function DownVote() {
             {pending ? (
                 <>
                     <button className={"py-1 px-0.5 group"} type={"submit"} disabled={true}>
-                        <Loader2 className={"h-5 w-5 text-primary animate-spin"}/>
+                        <Loader2 className={"size-4 text-red-500 animate-spin"}/>
                     </button>
                 </>
             ) : (
                 <>
                     <button className={"py-1 px-0.5 group"} type={"submit"}>
-                        <ArrowBigDown className={"h-5 w-5 text-primary"}/>
+                        <ThumbsDown className={"size-4 text-red-500"}/>
                     </button>
                 </>
             )}

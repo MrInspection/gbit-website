@@ -15,7 +15,7 @@ export async function SiteHeader() {
         <>
             <header className="sticky top-0 z-50 w-full border-b border-border/70 bg-background
              backdrop-blur supports-[backdrop-filter]:bg-background">
-                <div className="container flex h-14 max-w-screen-2xl items-center">
+                <div className="container flex h-14 max-w-screen-xl items-center">
                     <MainNav/>
                     <MobileNav/>
                     <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">

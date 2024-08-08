@@ -151,7 +151,7 @@ export default async function SubRedditRoute({params, searchParams} : {params: {
                                         <p className={"mt-2.5 text-sm"}>{data?.description}</p>
                                     )}
                                     <Separator className={"my-5"}/>
-                                    <Link href={user?.id ? `/r/${data?.name}/create` : '/api/auth/login'}
+                                    <Link href={user?.id ? `/r/${data?.name}/create` : 'api/auth/login'}
                                           className={cn(buttonVariants({size: "default"}), "w-full")}>Créer un post</Link>
                                 </CardContent>
                             </Card>

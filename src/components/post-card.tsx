@@ -52,7 +52,7 @@ export function PostCard({title, jsonContent, id, subName, userName, voteCount, 
                     </div>
                     <div className={"mt-5 -mb-1 flex space-x-6 items-center"}>
                         <div
-                            className={"flex space-x-1.5 items-center justify-items-center bg-muted px-2 py-1 rounded-xl"}>
+                            className={"flex space-x-1.5 items-center justify-items-center bg-neutral-100 px-3 py-1 rounded-xl"}>
                             <form action={HandleVote}>
                                 <input type={"hidden"} name={"voteDirection"} value={"UP"}/>
                                 <input type={"hidden"} name={"postID"} value={id}/>
@@ -71,7 +71,7 @@ export function PostCard({title, jsonContent, id, subName, userName, voteCount, 
                             <MessageCircle
                                 className={"h-4 w-4 text-muted-foreground"}/>
                             <p className={"text-muted-foreground text-sm font-medium"}>
-                                {comments} <span className={"max-sm:hidden"}>Commentaires</span>
+                                {comments} <span className={"max-sm:hidden"}>Comments</span>
                             </p>
                         </div>
                         <div className={"max-sm:hidden"}>

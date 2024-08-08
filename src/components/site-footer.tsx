@@ -1,53 +1,67 @@
 import Link from "next/link";
-import {Separator} from "@/components/ui/separator";
 import {siteConfig} from "@/config/siteConfig";
-import {Button} from "@/components/ui/button";
-import {BiLogoFacebook, BiLogoFlickr, BiLogoLinkedin, BiLogoYoutube} from "react-icons/bi";
+import {BiLogoFacebookCircle, BiLogoLinkedinSquare, BiLogoYoutube} from "react-icons/bi";
 import React from "react";
+import {GraduationCap} from "lucide-react";
 
 export default function SiteFooter() {
     return (
         <>
-            <footer className="py-2 mt-10 mb-10 md:px-8 md:py-0">
-                <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-                    <div className={"text-balance text-center text-sm leading-loose" +
-                        " text-muted-foreground md:text-left"}>
-                        <p className={"font-bold text-xl"}>{siteConfig.name}</p>
-                        <p className={"-mt-0.5 text-sm"}>Avenue Gaston Berger, 59016 Lille Cedex</p>
-
-                        <div className={"mt-3"}>
-                            <div className="my-6 sm:my-0 flex h-5 items-center space-x-4 text-sm">
-                                <Link href={"/user-agreement"} className={"hover:underline"}>User Agreement</Link>
-                                <Separator orientation="vertical"/>
-                                <Link href={"/privacy-policy"} className={"hover:underline"}>Privacy Policy</Link>
+            <footer className={"border-t-[3px] py-10 bg-background"}>
+                <div className={"container max-w-6xl flex flex-col items-center justify-center h-full"}>
+                    <section
+                        className={"flex max-md:flex-col flex-row items-center justify-between gap-10 w-full px-3 mt-4"}>
+                        <div>
+                            <div className={"flex flex-col items-center justify-center gap-1.5 "}>
+                                <GraduationCap className={"size-10"}/>
+                                <p className={"font-bold"}>GBIT & CVLE</p>
                             </div>
                         </div>
-                    </div>
-                    <div className={"text-balance text-center text-sm leading-loose" +
-                        " text-muted-foreground md:text-left"}>
-                        <div className={"grid gap-2 grid-cols-4"}>
-                            <Link href={siteConfig.links.facebook}>
-                                <Button variant={"secondary"} size="icon">
-                                    <BiLogoFacebook className="h-4 w-4"/>
-                                </Button>
+                        <nav className={"flex items-center gap-6 max-md:text-center"}>
+                            <Link
+                                href={"/terms-of-use"}
+                                className={"hover:text-primary hover:underline hover:underline-offset-4 text-balance"}
+                            >
+                                Terms of Use
                             </Link>
-                            <Link href={siteConfig.links.youtube}>
-                                <Button variant="secondary" size="icon">
-                                    <BiLogoYoutube className="h-4 w-4"/>
-                                </Button>
+                            <Link href={""}
+                                  className={"hover:text-primary hover:underline hover:underline-offset-4"}>
+                                Legal Mentions
                             </Link>
-                            <Link href={siteConfig.links.linkedin}>
-                                <Button variant="secondary" size="icon">
-                                    <BiLogoLinkedin className="h-4 w-4"/>
-                                </Button>
+                            <Link href={"/privacy-policy"}
+                                  className={"hover:text-primary hover:underline hover:underline-offset-4"}>
+                                Privacy Policy
                             </Link>
-                            <Link href={siteConfig.links.flickr}>
-                                <Button variant="secondary" size="icon">
-                                    <BiLogoFlickr className="h-4 w-4"/>
-                                </Button>
+                        </nav>
+                        <div className={"flex gap-3"}>
+                            <Link href={siteConfig.links.linkedin} target={"_blank"}>
+                                <BiLogoLinkedinSquare className={"size-8 hover:text-primary"}/>
+                            </Link>
+                            <Link href={siteConfig.links.facebook} target={"_blank"}>
+                                <BiLogoFacebookCircle className={"size-8 hover:text-primary"}/>
+                            </Link>
+                            <Link href={siteConfig.links.youtube} target={"_blank"}>
+                                <BiLogoYoutube className={"size-8 hover:text-primary"}/>
                             </Link>
                         </div>
-                    </div>
+                    </section>
+                    <section className={"mt-5 border-t-2 border-orange-600 pt-4 w-full text-muted-foreground"}>
+                        <p className={"w-full text-center"}>Built by {" "}
+                            <Link
+                                href={"https://github.com/MrInspection"}
+                                className={"underline underline-offset-4 font-medium"}>Moussa
+                            </Link>
+                            . The source code is available on <a
+                            href={"https://github.com/MrInspection/pulabs-gbit"}
+                            target={"_blank"}
+                            rel="noreferrer"
+                            className={"font-medium underline underline-offset-4"}
+                        >
+                            GitHub
+                        </a>
+                            .
+                        </p>
+                    </section>
                 </div>
             </footer>
         </>

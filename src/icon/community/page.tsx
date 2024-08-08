@@ -9,7 +9,6 @@ import {Suspense} from "react";
 import SuspenseCard from "@/components/suspense-card";
 import Pagination from "@/components/pagination";
 import {unstable_noStore as noStore} from "next/cache"
-import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
 
 async function getData(searchParam: string) {
     noStore()
@@ -47,9 +46,7 @@ async function getData(searchParam: string) {
     return {data, count}
 }
 
-export default async function CommunityPage({searchParams}: {searchParams: {page: string}}) {
-    const {getUser} = getKindeServerSession()
-    const user = await getUser()
+export default function CommunityPage({searchParams}: {searchParams: {page: string}}) {
     return (
         <>
             <div className="flex min-h-screen w-full flex-col bg-muted/40">
@@ -73,7 +70,7 @@ export default async function CommunityPage({searchParams}: {searchParams: {page
                                         pour consulter tous les contenus publiés par les différentes communautés.
                                     </p>
                                     <div className={"mt-5 grid gap-2"}>
-                                        <Link href={user?.id ? `/r/create` : 'api/auth/login'}
+                                        <Link href={"/r/create"}
                                               className={cn(buttonVariants({variant: "default", size: "sm"}))}>
                                             <Users className={"h-4 w-4 mr-2"}/> Créer une communauté
                                         </Link>

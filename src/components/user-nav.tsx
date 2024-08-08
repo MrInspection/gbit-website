@@ -26,17 +26,17 @@ export default function UserNav({userImage} : iAppProps) {
                     </Avatar>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className={"w-52"}>
-                    <DropdownMenuLabel>Mon Compte</DropdownMenuLabel>
+                    <DropdownMenuLabel>My account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuGroup>
                         <DropdownMenuItem>
                             <Link href={"/r/create"} className={"flex items-center w-full"}>
-                                <Users className={"h-4 w-4 mr-2"}/> Créer un groupe
+                                <Users className={"h-4 w-4 mr-2"}/> Create community
                             </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
                             <Link href={"/settings"} className={"flex items-center w-full"}>
-                                <Settings className={"h-4 w-4 mr-2"} /> Mes Paramètres
+                                <Settings className={"h-4 w-4 mr-2"} /> User settings
                             </Link>
                         </DropdownMenuItem>
                     </DropdownMenuGroup>
@@ -48,15 +48,15 @@ export default function UserNav({userImage} : iAppProps) {
                             </Link>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                            <Link href={"/user-agreement"} className={"flex items-center w-full"}>
-                                <Scale className={"h-4 w-4 mr-2"}/> User Agreement
+                            <Link href={"/terms-of-use"} className={"flex items-center w-full"}>
+                                <Scale className={"h-4 w-4 mr-2"}/> Terms of Use
                             </Link>
                         </DropdownMenuItem>
                     </DropdownMenuGroup>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem className={"text-red-500 font-medium focus:bg-red-500 focus:text-white"}>
                         <LogoutLink className={"flex items-center w-full"}>
-                            <LogOut className={"h-4 w-4 mr-2"} /> Se déconnecter
+                            <LogOut className={"h-4 w-4 mr-2"} /> Log out
                         </LogoutLink>
                     </DropdownMenuItem>
                 </DropdownMenuContent>
