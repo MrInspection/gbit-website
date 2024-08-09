@@ -1,4 +1,5 @@
 "use client"
+
 import {zodResolver} from "@hookform/resolvers/zod"
 import {useForm} from "react-hook-form"
 import {z} from "zod"
@@ -48,13 +49,20 @@ export default function ContactForm() {
 
     return (
         <>
-            <div className={"bg-muted/45 items-center"}>
-                <div className={"container max-w-2xl py-10 items-center justify-items-center pb-28"}>
-                    <div className={"my-10 text-center text-balance items-center justify-center"}>
-                        <h1 className={"text-5xl font-extrabold"}>Contacter le GBIT</h1>
-                    </div>
+
+
+            <div className={"md:border-r-2 md:border-l-2 container max-w-4xl max-md:px-8 px-20 py-24"}>
+
+
+                <h1 className={"bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 bg-clip-text text-transparent text-4xl md:text-5xl  font-extrabold text-center"}>Contacter le GBIT</h1>
+                <p className={"mt-8 text-center max-md:text-sm md:px-14"}>
+                    Vous avez des questions ou des demandes de renseignements ? Nous sommes là pour vous aider. Veuillez remplir le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.
+                </p>
+
+
+                <section className={"mt-14"}>
                     <Form {...form}>
-                        <form onSubmit={form.handleSubmit(onSubmit)} className="grid gap-5 items-center justify-center">
+                        <form onSubmit={form.handleSubmit(onSubmit)} className="p-6 md:p-10 space-y-6 border-2 rounded-2xl">
                             <div className={"grid sm:grid-cols-2 gap-3"}>
                                 <FormField
                                     control={form.control}
@@ -114,8 +122,23 @@ export default function ContactForm() {
                             <Button type="submit" className={"w-full"}>Send Message</Button>
                         </form>
                     </Form>
-                </div>
+                </section>
+
+
+
+
+
             </div>
+
+
+
+
+
+
+
+
+
+
         </>
     )
 }

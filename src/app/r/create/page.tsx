@@ -64,15 +64,11 @@ export default function CreateSubreddit() {
                                 <Link href={"/community"} className={cn(buttonVariants({variant: "outline"}))}>
                                     Annuler
                                 </Link>
-
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
-
-
         </>
     )
 }

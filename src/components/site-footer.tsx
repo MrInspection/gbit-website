@@ -24,7 +24,7 @@ export default function SiteFooter() {
                             >
                                 Terms of Use
                             </Link>
-                            <Link href={""}
+                            <Link href={"/"}
                                   className={"hover:text-primary hover:underline hover:underline-offset-4"}>
                                 Legal Mentions
                             </Link>
@@ -46,19 +46,11 @@ export default function SiteFooter() {
                         </div>
                     </section>
                     <section className={"mt-5 border-t-2 border-orange-600 pt-4 w-full text-muted-foreground"}>
-                        <p className={"w-full text-center"}>Built by {" "}
+                        <p className={"w-full text-center"}>©️ 2024 Spectron Labs. Built by {" "}
                             <Link
                                 href={"https://github.com/MrInspection"}
                                 className={"underline underline-offset-4 font-medium"}>Moussa
                             </Link>
-                            . The source code is available on <a
-                            href={"https://github.com/MrInspection/pulabs-gbit"}
-                            target={"_blank"}
-                            rel="noreferrer"
-                            className={"font-medium underline underline-offset-4"}
-                        >
-                            GitHub
-                        </a>
                             .
                         </p>
                     </section>

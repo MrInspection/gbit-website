@@ -2,7 +2,7 @@
 
 import {Button} from "@/components/ui/button";
 import { useFormStatus} from "react-dom"
-import {ArrowBigDown, ArrowBigUp, Loader2, Send, ThumbsDown, ThumbsUp} from "lucide-react";
+import {Loader2, Send, ThumbsDown, ThumbsUp} from "lucide-react";
 
 export function SubmitButton({text} : {text : string}) {
     const {pending} = useFormStatus()
@@ -29,7 +29,7 @@ export function SaveButton() {
                 </Button>
             ) : (
                 <Button size={"sm"} className={"w-full"} type={"submit"} variant={"outline"}>
-                    Sauvegarder la description
+                    Save description
                 </Button>
             )}
         </>
@@ -47,7 +47,7 @@ export function CreatePostButton() {
             ) : (
                 <Button className={"w-full"} type={"submit"}>
                     <Send className={"h-4 w-4 mr-2"} />
-                    Publier
+                    Publish
                 </Button>
             )}
         </>
@@ -65,7 +65,7 @@ export function CreateCommentButton() {
             ) : (
                 <Button className={"w-full"} type={"submit"}>
                     <Send className={"h-4 w-4 mr-2"} />
-                    Commenter
+                    Publish comment
                 </Button>
             )}
         </>

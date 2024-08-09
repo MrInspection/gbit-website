@@ -20,7 +20,7 @@ export async function CreatePostCard({community} : {community: string}) {
                     className={"h-8 w-8 rounded-3xl ring-2 ring-primary"}
                 />
                 <Link href={user?.id ? `/r/${community}/create` : 'api/auth/login'} className={"w-full"}>
-                    <Input placeholder={"Créer un nouveau poste..."} />
+                    <Input placeholder={"Create a new post..."} />
                 </Link>
 
                 <Link href={user?.id ? `/r/${community}/create` : 'api/auth/login'} className={cn(buttonVariants({variant: "default"}))}>
