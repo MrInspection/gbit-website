@@ -1,6 +1,7 @@
 import {ArrowRight, Briefcase, Hammer, Theater} from "lucide-react";
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
+import {GithubIndicator} from "@/components/github-indicator";
 
 export default function HomePage() {
     return (
@@ -105,11 +106,11 @@ export default function HomePage() {
                                     festifs, tels que les soirées d&apos;intégration et les bals de promo.
                                 </p>
                             </div>
-
                         </section>
                     </div>
                 </div>
             </main>
+            <GithubIndicator />
         </>
     );
 }

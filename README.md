@@ -1,8 +1,11 @@
 
 # GBIT Website (School)
 
-The `GBIT Website` is a study project with the aim of providing the Lycée Gaston Berger Student Association with a website. The website must be mobile responsive and must contain a landing page, a contact form that stores contact information into a database and also a privacy policy to be in line with the EU `General Data Protection Regulation`.
+The `GBIT Website` is a school project with the aim of providing the Lycée Gaston Berger Student Association with a website. The website must be mobile responsive and must contain a landing page, a contact form that stores contact information into a database and also a privacy policy to be in line with the EU `General Data Protection Regulation`.
 
+> **NOTE**: I have drastically improved the landing page and some authentication issues concerning this project.
+
+![](public/spectronlabs.png)
 
 ## 🔄️ Features 
 
@@ -61,5 +64,3 @@ To run this project on your local environment, follow the following steps :
 - Use a Markdown text editor instead of invoking an external library.
 - The ability to use the voting system on comments.
 - The ability to upload images and further customize the user profile.
-
-
