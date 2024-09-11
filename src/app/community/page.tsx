@@ -1,6 +1,6 @@
 import {buttonVariants} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Frown, School, Users} from "lucide-react";
+import {Frown, OctagonAlert, School, Users} from "lucide-react";
 import Link from "next/link";
 import {cn} from "@/lib/utils";
 import prisma from "@/lib/db";
@@ -10,6 +10,8 @@ import SuspenseCard from "@/components/suspense-card";
 import Pagination from "@/components/pagination";
 import {unstable_noStore as noStore} from "next/cache"
 import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
+import {InfoCircledIcon} from "@radix-ui/react-icons";
+import {Warning} from "postcss";
 
 async function getData(searchParam: string) {
     noStore()
@@ -62,20 +64,19 @@ export default async function CommunityPage({searchParams}: {searchParams: {page
                         </div>
                         <div className={"md:w-[30%]"}>
                             <Card>
-                                <CardHeader className="flex flex-row items-start bg-muted/50 rounded-t-xl">
+                                <CardHeader className="flex flex-row items-start bg-muted/50 rounded-t-xl border-b-2">
                                     <CardTitle className={"flex"}>
-                                        <School className={"h-4 w-4 mr-2"}/> Espace Communautaire
+                                        <School className={"size-4 mr-2"}/> Community Space
                                     </CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <p className={"mt-5 text-sm"}>
-                                        La page d{"'"}accueil de votre espace communautaire. Venez ici
-                                        pour consulter tous les contenus publiés par les différentes communautés.
+                                        The home page of your community space. Come here to consult all the content published by the various communities.
                                     </p>
                                     <div className={"mt-5 grid gap-2"}>
                                         <Link href={user?.id ? `/r/create` : 'api/auth/login'}
                                               className={cn(buttonVariants({variant: "default", size: "sm"}))}>
-                                            <Users className={"h-4 w-4 mr-2"}/> Créer une communauté
+                                             Create Community
                                         </Link>
                                     </div>
                                 </CardContent>
@@ -95,14 +96,13 @@ async function ShowItems({searchParams}: { searchParams: { page: string } }) {
             {data.length === 0 ? (
                 <>
                     <div
-                        className="flex h-[600px] shrink-0 items-center justify-center rounded-xl border-2  bg-background">
-                        <div
-                            className="mx-2 flex max-w-[420px] flex-col items-center justify-center text-center">
-                            <Frown className={"h-10 w-10 text-muted-foreground"}/>
-                            <h3 className="mt-4 text-2xl font-bold text-muted-foreground">
+                        className="flex h-[800px] shrink-0 items-center justify-center rounded-2xl border-2 bg-background">
+                        <div className="mx-2 flex max-w-[420px] flex-col items-center justify-center text-center">
+                            <OctagonAlert className={"size-10 text-muted-foreground"}/>
+                            <h3 className="mt-4 text-2xl font-bold">
                                 Your feed is empty
                             </h3>
-                            <p className="mb-4 mt-2 text-sm text-muted-foreground">
+                            <p className="mt-1.5 text-sm text-muted-foreground">
                                 Create a community and post a message to see it here
                             </p>
                         </div>
